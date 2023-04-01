@@ -1,0 +1,49 @@
+# примеры API-запросов
+
+@baseUrl = http://127.0.0.1:5000/
+
+# Регистрация
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "email": "",
+  "password": ""
+}
+
+###
+
+# Авторизация
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "email": "",
+  "password": ""
+}
+
+###
+
+# получение пользователя
+GET {{baseUrl}}/user/<user_id>
+Content-Type: application/json
+
+###
+
+# обновление пользователя
+PATCH {{baseUrl}}/user/<user_id>
+Content-Type: application/json
+Token: <token auth>
+
+{
+  "email": ""
+}
+
+###
+
+# удаление пользователя
+DELETE {{baseUrl}}/user/<user_id>
+Content-Type: application/json
+Token: <token auth>
+
+###

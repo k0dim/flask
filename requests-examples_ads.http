@@ -1,0 +1,40 @@
+# примеры API-запросов
+
+@baseUrl = http://127.0.0.1:5000/
+
+
+# Создать статью
+POST {{baseUrl}}/create_ad
+Content-Type: application/json
+Token: <token auth>
+
+{
+  "title": "Test",
+  "description": "Test description"
+}
+
+###
+
+# Получить статью
+GET {{baseUrl}}/ad/<ads_id>
+Content-Type: application/json
+
+###
+
+# Обновление статьи
+PATCH {{baseUrl}}/ad/<ads_id>
+Content-Type: application/json
+Token: <token auth>
+
+{
+  "title": ""
+}
+
+###
+
+# Удаление статьи
+DELETE {{baseUrl}}/ad/<ads_id>
+Content-Type: application/json
+Token: <token auth>
+
+###
